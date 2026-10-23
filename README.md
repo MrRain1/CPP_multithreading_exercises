@@ -1,0 +1,2 @@
+# CPP_multithreading_exercises
+Repository containing multithreading exercises
