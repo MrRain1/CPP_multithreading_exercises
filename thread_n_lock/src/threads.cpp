@@ -23,5 +23,5 @@ void incrementCounter(Counter *counter)
     double t_delta = std::chrono::duration<double, std::micro>(t_stop - t_start).count();
 
     std::cout << "Thread with id " << std::this_thread::get_id() << " unlocked the mutex and exited the critical section" << std::endl;
-    std::printf("Time needed to unlock the lock: %.3f us\n", t_delta);
+    std::cout << "Time in critical section: " << t_delta << " us" << std::endl;
 }
