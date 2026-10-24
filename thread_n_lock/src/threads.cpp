@@ -13,7 +13,7 @@ void incrementCounter(Counter *counter)
     counter->mutex.lock();
     std::cout << "Thread with id " << std::this_thread::get_id() << " acquired the lock" << std::endl;
 
-    for (int i = 0; i < 1e3; i++)
+    for (int i = 0; i < 1'000; i++)
     {
         counter->shared_counter++;
     }

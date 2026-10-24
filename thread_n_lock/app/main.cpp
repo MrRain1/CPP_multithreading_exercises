@@ -1,7 +1,5 @@
 #include <iostream>
 #include <thread>
-#include <mutex>
-#include <chrono>
 #include <vector>
 #include "threads.hpp"
 
@@ -16,7 +14,7 @@ int main()
     std::vector<std::thread> thread_vector;
     thread_vector.reserve(hw_threads);
 
-    for (int i = 0; i < hw_threads; i++)
+    for (uint32_t i = 0; i < hw_threads; i++)
     {
         thread_vector.emplace_back(incrementCounter, &counter);
         // std::cout << "Spawned thread with id: " << thread_vector[i].get_id() << std::endl;
